@@ -1,0 +1,302 @@
+*{ 
+    color: #FFFFFF;
+    background-color: #1C1C1C;
+}
+/*Propiedades para la barra de navegacion*/
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.barraDeNavegacion{
+    border-bottom: 2px solid #494949d8;
+}
+
+.elementos-nav-bar{
+    color: #FFFFFF !important; /*Lo que hace !important, es darle prioridad al color que le doy en mi hoja de estilos por encima de los estilos predefinidos de boostrap*/
+    transition: color 0.3s ease; 
+}
+
+.elementos-nav-bar.active:hover {
+    color: #ff5722 !important;
+}
+
+.navbar-toggler{ /*Le sacamos los bordes al boton*/
+    border: none !important;
+}
+
+.navbar-toggler:focus{ /*Le sacamos la sombra una vez que el boton está activo al boton*/
+    box-shadow: none !important;
+}
+
+.dropdown-menu{
+    padding: 0;
+    box-shadow: #494949d8 0px 1px 10px;
+}
+
+.meses{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+.contenedor-h1{
+    cursor: default;
+}
+
+h1{
+    background-color: transparent;
+}
+
+/* Clase del contenedor del ícono dentro del botón */
+.icono-login {
+    margin-left: auto;
+}
+
+/* Clase del ícono de Font Awesome */
+.icono {
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #8f8e8ed8; 
+    margin-left: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.icono:hover {
+    color: #ff5722; /* Cambia el color al pasar el cursor */
+}
+/*Se comienza a trabajar con el cuerpo de la página*/
+body{
+    background-color: #1C1C1C;
+}
+
+.contenedor-titulo{
+    width: 20%;
+    height: 7vh;
+    margin: 3% auto;
+    display: flex;
+    justify-content: center;
+    border: #ff8a42 solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px #494949d8;
+}
+
+.titulo-pagina{
+    width: auto;
+    margin: auto;
+    cursor: default;
+}
+
+.formulario{
+width: 30%;
+margin: 3% auto;
+padding: 1.5%;
+font-size: 16px;
+border: #ff8a42 solid 1px;
+border-radius: 15px;
+box-shadow: 0 0 20px 1px #494949d8;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+fieldset{
+    border: 1px solid #494949d8;
+    margin: 1.8%;
+    padding: 1% 2%;
+    border-radius: 5px;
+    position: relative; /* Para ajustar la posición del legend */
+}
+
+.titulo-input{
+    width: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #1C1C1C; 
+    position: absolute;
+    top: -12px; /* Ajusta según el diseño */
+    left: 10px; /* Alineación horizontal */
+}
+
+.ingresos{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5%;
+    border: 1px solid #494949d8;
+    border-radius: 5px;
+    margin: 8px 0; /* Más espacio entre el input y otros elementos */
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.boton {
+    padding: 2%;
+    width: 98%;
+    margin: auto;
+    margin-top: 1%;
+    border: none;
+    background-color: #ff8a42;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #f7833cc0;
+}
+
+.parrafo, .ancla{
+    margin: 2% auto 2% auto;
+}
+
+.parrafo{
+    margin-bottom: 0;
+}
+
+.ancla{
+    margin-top: 0;
+}
+
+/*Se dan las propiedades del footer*/
+/*Se centra el contenido del footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #494949d8;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-content p, .footer-content a{
+    margin: 0; /*Se eliminan los margenes para acercar los elemntos*/
+}
+
+a{
+    color: #FF8C42;
+}
+
+/* Ajustar el ícono cuando el menú está colapsado (dispositivos pequeños) */
+/* TAMAÑO PARA MÓVILES */
+@media (max-width: 480px) {
+    .contenedor-titulo {
+        width: 80%; /* Ajustamos el contenedor para pantallas pequeñas */
+        height: 6vh; 
+        margin: 5% auto; /* Un margen superior más grande */
+    }
+
+    .titulo-pagina {
+        font-size: 18px; /* Reducimos el tamaño del título */
+        text-align: center; /* Alineamos al centro */
+    }
+
+    .titulo-input {
+        font-size: 0.8rem; /* Reducimos el tamaño de los legend */
+    }
+
+    .formulario {
+        width: 80%; /* Ajustamos el tamaño de la forma */
+        font-size: 14px; /* Reducimos el tamaño de la fuente general */
+    }
+
+    .parrafo {
+        font-size: 12px; /* Ajustamos el tamaño del párrafo */
+        text-align: center; /* Alineamos el párrafo al centro */
+    }
+
+    .ancla {
+        font-size: 14px; /* Reducimos el tamaño de la clase ancla */
+        display: block;
+        text-align: center; /* Alineamos al centro */
+    }
+
+    .boton {
+        padding: 1.5%; /* Ajustamos el padding del botón */
+        width: 100%; /* Ajustamos el ancho */
+        font-size: 14px; /* Ajustamos el tamaño de la fuente en el botón */
+    }
+}
+
+/* TAMAÑO PARA TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+    .contenedor-titulo {
+        width: 60%; /* Ajustamos el contenedor para tablets */
+        height: 7vh; /* Mantén la altura */
+        margin: 3% auto;
+    }
+
+    .titulo-pagina {
+        font-size: 20px; /* Aumentamos un poco el tamaño del título */
+        text-align: center;
+    }
+
+    .titulo-input {
+        font-size: 0.9rem; /* Ajustamos ligeramente el tamaño de los legend */
+    }
+
+    .formulario {
+        width: 70%; /* Ajustamos el tamaño del formulario */
+        font-size: 15px; /* Aumentamos ligeramente el tamaño de la fuente */
+    }
+
+    .parrafo {
+        font-size: 14px; /* Ajustamos el tamaño del párrafo */
+        text-align: center;
+    }
+
+    .ancla {
+        font-size: 15px; /* Aumentamos el tamaño de la clase ancla */
+        display: block;
+        text-align: center;
+    }
+
+    .boton {
+        padding: 2%; /* Ajustamos el padding */
+        width: 100%;
+        font-size: 16px; /* Aumentamos el tamaño de la fuente en el botón */
+    }
+}
+
+/* TAMAÑO PARA LAPTOPS */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenedor-titulo {
+        width: 50%; /* Ajustamos el contenedor para laptops */
+        height: 7vh;
+        margin: 3% auto;
+    }
+
+    .titulo-pagina {
+        font-size: 22px; /* Aumentamos el tamaño del título para laptops */
+        text-align: center;
+    }
+
+    .titulo-input {
+        font-size: 1rem; 
+    }
+
+    .formulario {
+        width: 50%; /* Ajustamos el tamaño del formulario */
+        font-size: 16px; /* Aumentamos el tamaño de la fuente */
+    }
+
+    .parrafo {
+        font-size: 16px; /* Aumentamos el tamaño del párrafo */
+        text-align: center;
+    }
+
+    .ancla {
+        font-size: 16px; 
+        display: block;
+        text-align: center;
+    }
+
+    .boton {
+        padding: 2%; 
+        width: 100%;
+        font-size: 18px; 
+    }
+}

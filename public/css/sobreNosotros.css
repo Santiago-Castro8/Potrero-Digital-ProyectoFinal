@@ -1,0 +1,199 @@
+*{ 
+    color: #FFFFFF;
+    background-color: #1C1C1C;
+}
+/*Propiedades para la barra de navegacion*/
+/*Propiedades para la barra de navegacion*/
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.barraDeNavegacion{
+    border-bottom: 2px solid #494949d8;
+}
+
+.elementos-nav-bar{
+    color: #FFFFFF !important; /*Lo que hace !important, es darle prioridad al color que le doy en mi hoja de estilos por encima de los estilos predefinidos de boostrap*/
+    transition: color 0.3s ease; 
+}
+
+.elementos-nav-bar.active:hover {
+    color: #ff5722 !important;
+}
+
+.navbar-toggler{ /*Le sacamos los bordes al boton*/
+    border: none !important;
+}
+
+.navbar-toggler:focus{ /*Le sacamos la sombra una vez que el boton está activo al boton*/
+    box-shadow: none !important;
+}
+
+.dropdown-menu{
+    padding: 0;
+    box-shadow: #494949d8 0px 1px 10px;
+}
+
+.meses{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+h1{
+    background-color: transparent;
+}
+
+/* Clase del contenedor del ícono dentro del botón */
+.icono-login {
+    margin-left: auto;
+}
+
+/* Clase del ícono de Font Awesome */
+.icono {
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #8f8e8ed8; 
+    margin-left: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.icono:hover {
+    color: #ff5722; /* Cambia el color al pasar el cursor */
+}
+/*Se comienza a trabajar con el cuerpo de la página*/
+body{
+    background-color: #1C1C1C;
+}
+
+h2{
+    background-color: transparent;
+}
+
+.contenedor-sobreNosotros{
+    background: #4949493d;
+    padding: 1%;
+    margin: 1% auto;
+    border: #ff8a42 solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px #494949d8;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-titulo{
+    width: 20%;
+    height: 5vh;
+    margin: 1% auto;
+    display: flex;
+    justify-content: center;
+    border: #ff8a42 solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px #494949d8;
+}
+
+.contenedor-descripcion{
+    width: auto;
+    font-size: 16px;
+    margin: 2%;
+    border: 1px solid #ff8a42;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px #494949d8;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.descripcion{
+    margin: 0;
+}
+
+.titulo{
+    width: auto;
+    margin: auto;
+    cursor: default;
+}
+
+.contenedor-lugar{
+    width: 40%;
+    height: 40vh;
+    padding: 1%;
+    margin: 2%;
+    border: 1px solid #ff8a42;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px #494949d8;
+    display: flex;
+    justify-content: center;
+}
+
+iframe{
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.contenedor-video{
+    width: auto;
+}
+
+.video{
+    width: 100%;
+}
+
+/*Se dan las propiedades del footer*/
+/*Se centra el contenido del footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #494949d8;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-content p, .footer-content a{
+    margin: 0; /*Se eliminan los margenes para acercar los elemntos*/
+}
+
+a{
+    color: #FF8C42;
+}
+
+/* TAMAÑO PARA TABLET */
+@media (max-width: 1024px) {
+    .contenedor-titulo {
+        width: 50%; /* Aumentamos el ancho del contenedor */
+    }
+    .titulo {
+        font-size: 24px; /* Ajustamos el tamaño del título */
+        text-align: center; /* Centramos el texto */
+    }
+}
+
+/* TAMAÑO PARA MÓVILES Y TABLETS MÁS PEQUEÑAS */
+@media (max-width: 768px) {
+    .contenedor-titulo {
+        width: 70%; /* Más ancho para asegurar que quepa en tablet */
+    }
+    .titulo {
+        font-size: 18px; /* Ajustamos aún más el tamaño */
+        text-align: center;
+    }
+}
+
+/* TAMAÑO PARA MÓVILES PEQUEÑOS */
+@media (max-width: 480px) {
+    .contenedor-titulo {
+        width: 90%; /* Ocupamos casi toda la pantalla */
+    }
+    .titulo {
+        font-size: 16px; /* Reducimos más el título */
+        text-align: center;
+    }
+}

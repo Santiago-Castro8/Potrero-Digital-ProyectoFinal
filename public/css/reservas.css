@@ -1,0 +1,308 @@
+*{ 
+    color: #FFFFFF;
+    background-color: #1C1C1C;
+}
+/*Propiedades para la barra de navegacion*/
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.barraDeNavegacion{
+    border-bottom: 2px solid #494949d8;
+}
+
+.elementos-nav-bar{
+    color: #FFFFFF !important; /*Lo que hace !important, es darle prioridad al color que le doy en mi hoja de estilos por encima de los estilos predefinidos de boostrap*/
+    transition: color 0.3s ease; 
+}
+
+.elementos-nav-bar.active:hover {
+    color: #ff5722 !important;
+}
+
+.navbar-toggler{ /*Le sacamos los bordes al boton*/
+    border: none !important;
+}
+
+.navbar-toggler:focus{ /*Le sacamos la sombra una vez que el boton está activo al boton*/
+    box-shadow: none !important;
+}
+
+.dropdown-menu{
+    padding: 0;
+    box-shadow: #494949d8 0px 1px 10px;
+}
+
+.meses{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+.contenedor-h1{
+    cursor: default;
+}
+
+h1{
+    background-color: transparent;
+}
+
+/* Clase del contenedor del ícono dentro del botón */
+.icono-login {
+    margin-left: auto;
+}
+
+/* Clase del ícono de Font Awesome */
+.icono {
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #8f8e8ed8; 
+    margin-left: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.icono:hover {
+    color: #ff5722; /* Cambia el color al pasar el cursor */
+}
+
+/*Se comienza a trabajar con el cuerpo de la página*/
+body{
+    background-color: #1C1C1C;
+}
+
+.titulo-pagina{
+    width: 20%;
+    height: 7vh;
+    margin: 1% auto;
+    display: flex;
+    justify-content: center;
+    border: #ff8a42 solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px #494949d8;
+}
+
+.titulo {
+    background-color: transparent;
+    font-size: 28px;
+    margin: 0 auto; 
+    padding: 10px;
+    text-align: center;
+}
+
+
+.contenedor-reservas{
+    background: #1C1C1C;
+    width: 85%;
+    padding: 1%;
+    margin: 2% auto;
+    border: #ff8a42 solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px #4949495e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.reservas{
+    box-sizing: border-box;
+    background-color: #49494971;
+    width: 90%;
+    height: auto;
+    padding: 1%;
+    margin: 1.2% auto;
+    border: 1px solid #ff8a42;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px #5c5b5b57;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.especificaciones{
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    padding: 0.5%;
+}
+
+.desde{
+    border: 3px solid #21ad05;
+}
+
+.departamento{
+    border: 2px solid #ffffff5b;
+}
+
+.familia{
+    border: 2px solid #ffffff5b;
+}
+
+.hasta{
+    border: 3px solid #c90606;
+}
+
+.contenedor-input{
+    background-color: transparent;
+}
+
+.titulos-input{
+    background-color: transparent;
+}
+
+.contenedor-botones{
+    background-color: transparent;
+    width: 35%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botones{
+    padding: 1%;
+    width: 20%;
+    margin: auto;
+    border: 2px solid #ff8a42;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.opciones{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+.formulario-reservas{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+p{
+    margin: 0;
+    background-color: transparent;
+}
+
+/*Se dan las propiedades del footer*/
+/*Se centra el contenido del footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #494949d8;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-content p, .footer-content a{
+    margin: 0; /*Se eliminan los margenes para acercar los elemntos*/
+}
+
+a{
+    color: #FF8C42;
+}
+
+/* TAMAÑO PARA TABLETS Y LAPTOPS */
+@media (max-width: 1024px) {
+    .contenedor-titulo {
+        width: 50%;
+        margin: auto;
+    }
+
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form input,
+    form select,
+    form button,
+    form input[type="submit"] {
+        width: 100%;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    article div {
+        order: 0;
+    }
+
+    article button,
+    article input[type="submit"] {
+        order: 1;
+    }
+}
+
+/* TAMAÑO PARA TABLETS MÁS PEQUEÑAS */
+@media (max-width: 768px) {
+    .contenedor-titulo {
+        width: 70%;
+        margin: auto;
+    }
+
+    .titulo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    form input,
+    form select {
+        width: 100%;
+    }
+
+    form button,
+    form input[type="submit"] {
+        margin-top: 1rem;
+    }
+
+    article div {
+        width: 100%;
+    }
+}
+
+/* TAMAÑO PARA MÓVILES */
+@media (max-width: 480px) {
+    .contenedor-titulo {
+        width: 90%;
+        margin: auto;
+    }
+
+    .titulo {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    form {
+        gap: 1.5rem;
+    }
+
+    form input,
+    form select,
+    form button,
+    form input[type="submit"] {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    article {
+        gap: 1.5rem;
+    }
+}

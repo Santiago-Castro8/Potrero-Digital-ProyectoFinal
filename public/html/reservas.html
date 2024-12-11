@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservas</title>
+        <!--Icono de la pestaña-->
+        <link rel="icon" href="/public/images/IconoAgenda.png" type="image/png">
+    
+        <!--Conexión con Boostrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+        
+        <!--Hoja de estilos-->
+        <link rel="stylesheet" href="/public/css/reservas.css">
+    </head>
+<body>
+    <!--Barra de navegacion con boostrap-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid barraDeNavegacion">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../../index.html">
+                <img src="/public/images/IconoAgenda.png" alt="Alquileres">
+            </a>
+            
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2rem" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" class="boton-responsive"/>
+                </svg>
+            </button>
+            
+            <!-- Contenido del menú colapsable -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <!-- Opciones principales -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active elementos-nav-bar" aria-current="page" href="/public/html/reservas.html">Reservas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active elementos-nav-bar" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Meses</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item meses" href="/public/html/enero.html">Enero</a></li>
+                            <li><a class="dropdown-item meses" href="/public/html/febrebro.html">Febrero</a></li>
+                            <li><a class="dropdown-item meses" href="/public/html/marzo.html">Marzo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Ícono de usuario -->
+                <div class="icono-login">
+                    <a href="/public/html/inicioSesion.html">
+                        <i class="fa-solid fa-user icono"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Título central -->
+            <div class="position-absolute start-50 translate-middle-x contenedor-h1">
+                <h1 class="m-0">ALQUILERES</h1>
+            </div>
+        </div>
+    </nav>
+    
+    <!--Se comienza a trabajar en el cuerpo de la página (Reservas)-->
+    <div class="container titulo-pagina">
+        <h2 class="titulo">Reservas</h2>
+    </div>
+
+    <section class="contenedor-reservas">
+        <form class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="contenedor-input">
+                <h6 class="titulos-input">Fecha de ingreso</h6>
+                <input class="especificaciones desde" type="text" name="fechaEntrada" placeholder="Fecha de ingreso"> <!--Ingresa la fecha de entrada del inquilino-->
+            </div>
+            
+            <div class="contenedor-input">
+                <h6 class="titulos-input">Hora de ingreso</h6>
+                <select class="especificaciones desde" name=""><!--Hora de salida de los inquilinos-->
+                    <option class="especificaciones opciones value="hora" disabled selected>Elija una opcion</option>
+                    <option class="especificaciones opciones value="hora">09:00</option>
+                    <option class="especificaciones opciones value="hora">09:30</option>
+                    <option class="especificaciones opciones value="hora">10:00</option>
+                    <option class="especificaciones opciones value="hora">10:30</option>
+                    <option class="especificaciones opciones value="hora">11:00</option>
+                    <option class="especificaciones opciones value="hora">11:30</option>
+                    <option class="especificaciones opciones value="hora">12:00</option>
+                    <option class="especificaciones opciones value="hora">12:30</option>
+                    <option class="especificaciones opciones value="hora">13:00</option>
+                    <option class="especificaciones opciones value="hora">13:30</option>
+                    <option class="especificaciones opciones value="hora">14:00</option>
+                    <option class="especificaciones opciones value="hora">14:30</option>
+                    <option class="especificaciones opciones value="hora">16:00</option>
+                    <option class="especificaciones opciones value="hora">16:30</option>
+                    <option class="especificaciones opciones value="hora">17:00</option>
+                    <option class="especificaciones opciones value="hora">17:30</option>
+                    <option class="especificaciones opciones value="hora">18:00</option>
+                    <option class="especificaciones opciones value="hora">18:30</option>
+                    <option class="especificaciones opciones value="hora">19:00</option>
+                    <option class="especificaciones opciones value="hora">19:30</option>
+                    <option class="especificaciones opciones value="hora">20:00</option>
+                    <option class="especificaciones opciones value="hora">20:30</option>
+                    <option class="especificaciones opciones value="hora">21:00</option>
+                    <option class="especificaciones opciones value="hora">21:30</option>
+                    <option class="especificaciones opciones value="hora">22:30</option>
+                    <option class="especificaciones opciones value="hora">23:30</option>
+                </select>  <!--Ingresa la hora de ingreso del inquilino-->
+            </div>
+            
+            <div class="contenedor-input">
+                <h6 class="titulos-input">Departamento</h6>
+                <select class="especificaciones departamento" name="">
+                    <option class="especificaciones" value="hora" disabled selected>Elija una opcion</option>
+                    <option value="Departamento opciones">Departamento 1</option>
+                    <option value="Departamento opciones">Departamento 2</option>
+                </select> <!--Informa el departamento que usará el inquilino (hay 2 departamentos)-->
+            </div>
+            <div class="contenedor-input">
+                <h6 class="titulos-input">Familia</h6>
+                <input class="especificaciones departamento" name="Familia" placeholder="Familia"> <!--Apellido o nombre de quien alquiló el departamento-->
+            </div>
+            
+            <div class="contenedor-input">
+                <h6 class="titulos-input">Fecha de salida</h6>
+                <input class="especificaciones hasta" name="fechaSalida" placeholder="Fecha de ingreso"> <!--Da a entender hasta que fecha se queda el inquilino-->
+            </div>
+            
+            <div class="contenedor-input">
+                <h6 class="titulos-input">Hora de salida</h6>
+                <select class="especificaciones hasta" name=""><!--Hora de salida de los inquilinos-->
+                    <option class="especificaciones opciones" value="hora" disabled selected>Elija una opcion</option>
+                    <option class="especificaciones opciones" value="hora">09:00</option>
+                    <option class="especificaciones opciones" value="hora">09:30</option>
+                    <option class="especificaciones opciones" value="hora">10:00</option>
+                    <option class="especificaciones opciones" value="hora">10:30</option>
+                    <option class="especificaciones opciones" value="hora">11:00</option>
+                    <option class="especificaciones opciones" value="hora">11:30</option>
+                    <option class="especificaciones opciones" value="hora">12:00</option>
+                    <option class="especificaciones opciones" value="hora">12:30</option>
+                    <option class="especificaciones opciones" value="hora">13:00</option>
+                    <option class="especificaciones opciones" value="hora">13:30</option>
+                    <option class="especificaciones opciones" value="hora">14:00</option>
+                    <option class="especificaciones opciones" value="hora">14:30</option>
+                    <option class="especificaciones opciones" value="hora">16:00</option>
+                    <option class="especificaciones opciones" value="hora">16:30</option>
+                    <option class="especificaciones opciones" value="hora">17:00</option>
+                    <option class="especificaciones opciones" value="hora">17:30</option>
+                    <option class="especificaciones opciones" value="hora">18:00</option>
+                    <option class="especificaciones opciones" value="hora">18:30</option>
+                    <option class="especificaciones opciones" value="hora">19:00</option>
+                    <option class="especificaciones opciones" value="hora">19:30</option>
+                    <option class="especificaciones opciones" value="hora">20:00</option>
+                    <option class="especificaciones opciones" value="hora">20:30</option>
+                    <option class="especificaciones opciones" value="hora">21:00</option>
+                    <option class="especificaciones opciones" value="hora">21:30</option>
+                    <option class="especificaciones opciones" value="hora">22:30</option>
+                    <option class="especificaciones opciones" value="hora">23:30</option>
+                </select>
+            </div>
+            <hr>
+            <div class="contenedor-botones">
+                <input class="botones" type="submit" value="Agregar">
+                <button class="botones" type="reset" value="Borrar">Eliminar</button>
+            </div>
+        </form>
+        <!--Reserva 1-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde : 05/01/25</p>
+            </div>
+
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 12:30</p>
+            </div>
+
+            <div class="especificaciones departamento"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 1</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Rodriguez</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 10/01/25</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 22:00</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+        <!--Reserva 2-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 05/01/25</p>
+            </div>
+
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 15:00</p>
+            </div>
+            <div class="especificaciones departamento" > <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 2</p>
+            </div>
+
+            <div class="especificaciones familia" > <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Fernandez</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 08/01/25</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 20:30</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+        <!--Reserva 3-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 12/01/25</p>
+            </div>
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 10:00</p>
+            </div>
+            <div class="especificaciones departamento"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 1</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Martinez</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 16/01/25</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 18:30</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+        <!--Reserva 4-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 16/01/25</p>
+            </div>
+
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 09:00</p>
+            </div>
+
+            <div class="especificaciones departamento"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 2</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Rubio</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 18/01/25</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 21:00</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+
+        <!--Reserva 5-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 18/01/25</p>
+            </div>
+
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 08:00</p>
+            </div>
+
+            <div class="especificaciones departamento"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 1</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Romero</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 22/01/25</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 16:00</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+
+        <!--Reserva 6-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde" > <!--Representa cuando entra el inquilino-->
+                <p>Desde 21/01/25</p>
+            </div>
+            <div class="especificaciones desde" > <!--Representa cuando entra el inquilino-->
+                <p>Hora : 10:30</p>
+            </div>
+            <div class="especificaciones departamento" > <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 2</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Hernandez</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 25/01/25</p>
+            </div>
+            <div class="especificaciones hasta" > <!--Representa cuando entra el inquilino-->
+                <p>Hora : 11:30</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+
+        <!--Reserva 7-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 25/01/25</p>
+            </div>
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 12:30</p>
+            </div>
+            <div class="especificaciones departamento"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 1</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Ruiz</p>
+            </div>
+
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 28/01/25</p>
+            </div>
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 20:30</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+
+        <!--Reserva 8-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 27/01/25</p>
+            </div>
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 13:30</p>
+            </div>
+            <div class="especificaciones departamento" > <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 2</p>
+            </div>
+            <div class="especificaciones familia" > <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Nuñez</p>
+            </div>
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 31/01/25</p>
+            </div>
+            <div class="especificaciones hasta" > <!--Representa cuando entra el inquilino-->
+                <p>Hora : 11:30</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+
+        <!--Reserva 9-->
+        <article class="reservas"><!--Cada article representa una reserva ya guardada-->
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Desde 29/01/25</p>
+            </div>
+            <div class="especificaciones desde"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 12:00</p>
+            </div>
+            <div class="especificaciones departamento"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Departamento 1</p>
+            </div>
+
+            <div class="especificaciones familia"> <!--Informa en que departamento se aloja el inquilino con su nombre-->
+                <p>Familia Colombatti</p>
+            </div>
+            
+            <div class="especificaciones hasta"> <!--Da a entender hasta que fecha se queda el inquilino-->
+                <p>Hasta 31/01/25</p>
+            </div>
+            <div class="especificaciones hasta"> <!--Representa cuando entra el inquilino-->
+                <p>Hora : 12:00</p>
+            </div>
+
+            <form class="formulario-reservas">
+                <div class="contenedor-botones">
+                    <input class="botones" type="submit" value="Modificar">
+                    <input class="botones" type="submit" value="Eliminar">
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class>&copy; Derechos reservados por Santiago Castro</p>
+            <a href="sobreNosotros.html">Sobre Nosotros</a>
+        </div>
+    </footer>  
+    <!--Script Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Script para el uso de los iconos de Font Awesome-->
+    <script src="https://kit.fontawesome.com/d46bdfb547.js" crossorigin="anonymous"></script>
+</body>
+</html>

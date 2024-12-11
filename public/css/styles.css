@@ -1,0 +1,154 @@
+/*Propiedades generales*/
+*{ 
+    color: #FFFFFF;
+    background-color: #1C1C1C;
+}
+/*Propiedades para la barra de navegacion*/
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.barraDeNavegacion{
+    border-bottom: 2px solid #494949d8;
+}
+
+.elementos-nav-bar{
+    color: #FFFFFF !important; /*Lo que hace !important, es darle prioridad al color que le doy en mi hoja de estilos por encima de los estilos predefinidos de boostrap*/
+    transition: color 0.3s ease; 
+}
+
+.elementos-nav-bar.active:hover {
+    color: #ff5722 !important;
+}
+
+.navbar-toggler{ /*Le sacamos los bordes al boton*/
+    border: none !important;
+}
+
+.navbar-toggler:focus{ /*Le sacamos la sombra una vez que el boton está activo al boton*/
+    box-shadow: none !important;
+}
+
+.dropdown-menu{
+    padding: 0;
+    box-shadow: #494949d8 0px 1px 10px;
+}
+
+.meses{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+.contenedor-h1{
+    cursor: default;
+}
+
+h1{
+    background-color: transparent;
+}
+
+/* Clase del contenedor del ícono dentro del botón */
+.icono-login {
+    margin-left: auto;
+}
+
+/* Clase del ícono de Font Awesome */
+.icono {
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #8f8e8ed8; 
+    margin-left: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.icono:hover {
+    color: #ff5722; /* Cambia el color al pasar el cursor */
+}
+
+
+
+/* Centrar el carrusel en la página */
+#carouselExampleIndicators {
+    max-width: 70%; 
+    margin: 0 auto;
+    padding: 20px 0; 
+}
+
+/* Ajustar las imágenes dentro del carrusel */
+.carousel-item img {
+    max-height: 20%; 
+    width: auto; 
+    margin: auto; 
+}
+
+/*Acomodamos las flechas del carrusel afuera de las imágenes*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 50px; 
+    height: 50px;
+    z-index: 5; 
+}
+
+/* Flecha izquierda */
+.carousel-control-prev {
+    left: -60px; /* Mover fuera de la imagen */
+}
+
+/* Flecha derecha */
+.carousel-control-next {
+    right: -60px; /* Mover fuera de la imagen */
+}
+
+/* Efecto hover para las flechas */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #FF6600; /* Color más claro al pasar el mouse */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/*se cambia el color de los indicadores de pestañas del carrucel*/
+/* Indicadores personalizados */
+.indicadores {
+    background-color: #FF6600 !important;
+}
+
+/* Contenedor de los indicadores */
+.carousel-indicators {
+    background-color: transparent;
+}
+
+/*Se dan las propiedades del footer*/
+/*Se centra el contenido del footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #494949d8;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-content p, .footer-content a{
+    margin: 0; /*Se eliminan los margenes para acercar los elemntos*/
+}
+
+.footer-content a{
+    color: #FF8C42;
+}
+
+/* Ajustar el ícono cuando el menú está colapsado (dispositivos pequeños) */

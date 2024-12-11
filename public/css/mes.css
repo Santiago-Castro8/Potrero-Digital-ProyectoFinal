@@ -1,0 +1,241 @@
+/*Propiedades generales*/
+*{ 
+    color: #FFFFFF;
+    background-color: #1C1C1C;
+}
+/*Color para el cuerpo de la página*/
+body{
+    background-color: #1C1C1C;
+}
+/*Propiedades para la barra de navegacion*/
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.barraDeNavegacion{
+    border-bottom: 2px solid #494949d8;
+}
+
+.elementos-nav-bar{
+    color: #FFFFFF !important; /*Lo que hace !important, es darle prioridad al color que le doy en mi hoja de estilos por encima de los estilos predefinidos de boostrap*/
+    transition: color 0.3s ease; 
+}
+
+.elementos-nav-bar.active:hover {
+    color: #ff5722 !important;
+}
+
+.navbar-toggler{ /*Le sacamos los bordes al boton*/
+    border: none !important;
+}
+
+.navbar-toggler:focus{ /*Le sacamos la sombra una vez que el boton está activo al boton*/
+    box-shadow: none !important;
+}
+
+.dropdown-menu{
+    padding: 0;
+    box-shadow: #494949d8 0px 1px 10px;
+}
+
+.meses{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+.contenedor-h1{
+    cursor: default;
+}
+
+h1{
+    background-color: transparent;
+}
+
+/* Clase del contenedor del ícono dentro del botón */
+.icono-login {
+    margin-left: auto;
+}
+
+/* Clase del ícono de Font Awesome */
+.icono {
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #8f8e8ed8; 
+    margin-left: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.icono:hover {
+    color: #ff5722; /* Cambia el color al pasar el cursor */
+}
+
+
+/*Se comienza a trabajar en el contenido de la página*/
+/*Le damos las propiedades para centrar, darle color, bordes, etc. a los titulos del calendario del mes de enero*/
+
+.contenedorPadre{ /*Se le dan propiedades al contenedor padre, tanto en su color, margen, bordes y display flex para acomodar el contenido*/
+    background-color: #63636331;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 20px;
+    border: #FF8C42 solid 1px;
+}
+
+.contenedor{/*En esta clase se encuentran las propiedades que le vamos a dar a todos los contenedores que se encuentran en el contenedor padre*/
+    width: 20%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1C1C1C;
+    border-radius: 20px;
+    border: #FF8C42 solid 1px;
+}
+
+#subtitulos{ /*Usamos este id para manejar el contenedor de los subtitulos del calendario, que solo le sacamos los bordes redondeados*/
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.titulo-calendario{ /*Aquí se encuentran las propiedades que le vamos a dar al contenido de nuestro contenedor para los subtitulos*/
+    margin: 5px;
+    font-size: 22px;
+}
+
+#dias{ /*Usamos este id para darle propiedades especifiacs al contenedor donde se van a encontrar los días, lo separamos del contenedor de debajo y lo pegamos al contenedor de arriba y usamos */
+    width: 80%;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dia{
+    margin-top: 0.5%;/*Ajutamos apenas el margen para que quede bien centrado*/
+    font-size: 18px;
+    border-radius: 4px;
+    border: #FF8C42 solid 1px;
+}
+
+.linea-vertical{/*Le damos una separacion a los días*/
+    width: 0.3%; 
+    height: 80%; 
+    background-color: #747373; 
+    border: none; 
+}
+
+#fechas{
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.semana{
+    width: 1500px;
+    margin: 0;
+    padding: 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fuera-mes{
+    color: #747373;
+}
+
+.numeros{
+    width: 4%;
+    font-size: 18px;
+    margin: 1%;
+    padding: 0.4%;
+    border: #FF8C42 solid 2px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Se centra el contenido del FOOTER*/
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #494949d8;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-content p, .footer-content a{
+    margin: 0; /*Se eliminan los margenes para acercar los elemntos*/
+}
+
+.footer-content a{
+    color: #FF8C42;
+}
+
+
+/* TAMAÑO PARA MÓVILES */
+@media (max-width: 480px) {
+    .titulo-calendario {
+        font-size: 14px; /* Reducimos el tamaño de los h2  */
+    }
+
+    .numeros {
+        font-size: 12px; /* tamaño de los números en los días */
+    }
+
+    .dia {
+        font-size: 14px; /* tamaño de los h4 (Días de la semana) */
+    }
+}
+
+/* TAMAÑO PARA TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+    .titulo-calendario {
+        font-size: 16px; /* tamaño de los h2  */
+    }
+
+    .numeros {
+        font-size: 14px; /* tamaño de los números */
+    }
+
+    .dia {
+        font-size: 16px; /* tamaño de los h4 */
+    }
+}
+
+/* TAMAÑO PARA LAPTOPS */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .titulo-calendario {
+        font-size: 18px; /* tamaño de los h2  */
+    }
+
+    .numeros {
+        font-size: 16px; /* tamaño de los números */
+    }
+
+    .dia {
+        font-size: 18px; /* tamaño de los h4 */
+    }
+}

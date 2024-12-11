@@ -1,0 +1,270 @@
+*{ 
+    color: #FFFFFF;
+    background-color: #1C1C1C;
+}
+/*Propiedades para la barra de navegacion*/
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.barraDeNavegacion{
+    border-bottom: 2px solid #494949d8;
+}
+
+.elementos-nav-bar{
+    color: #FFFFFF !important; /*Lo que hace !important, es darle prioridad al color que le doy en mi hoja de estilos por encima de los estilos predefinidos de boostrap*/
+    transition: color 0.3s ease; 
+}
+
+.elementos-nav-bar.active:hover {
+    color: #ff5722 !important;
+}
+
+.navbar-toggler{ /*Le sacamos los bordes al boton*/
+    border: none !important;
+}
+
+.navbar-toggler:focus{ /*Le sacamos la sombra una vez que el boton está activo al boton*/
+    box-shadow: none !important;
+}
+
+.dropdown-menu{
+    padding: 0;
+    box-shadow: #494949d8 0px 1px 10px;
+}
+
+.meses{
+    color: #FF8C42;
+    background-color: #1C1C1C;
+}
+
+.contenedor-h1{
+    cursor: default;
+}
+
+h1{
+    background-color: transparent;
+}
+
+/* Clase del contenedor del ícono dentro del botón */
+.icono-login {
+    margin-left: auto;
+}
+
+/* Clase del ícono de Font Awesome */
+.icono {
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #8f8e8ed8; 
+    margin-left: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.icono:hover {
+    color: #ff5722; /* Cambia el color al pasar el cursor */
+}
+/*Se comienza a trabajar con el cuerpo de la página*/
+body{
+    background-color: #1C1C1C;
+}
+
+.contenedor-titulo{
+    width: 15%;
+    height: 7vh;
+    margin: 3% auto;
+    display: flex;
+    justify-content: center;
+    border: #ff8a42 solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px #494949d8;
+}
+
+.titulo-pagina{
+    width: auto;
+    margin: auto;
+    cursor: default;
+}
+
+.formulario{
+width: 65%;
+margin: 3% auto;
+padding: 1.5%;
+font-size: 16px;
+border: 1px solid #ff8a42;
+border-radius: 15px;
+box-shadow: 0 0 20px 1px #494949d8;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.contenedor-columnas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para que se adapten en pantallas más pequeñas */
+}
+
+.columna {
+    flex: 1; /* Cada columna ocupará un mismo ancho */
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    width: 95%; 
+    margin: 2%;
+    border: 1px solid #494949d8;
+    padding: 2% 3%;
+    border-radius: 5px;
+    position: relative; /* Para ajustar la posición del legend */
+}
+
+.titulo-input{
+    width: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #1C1C1C; 
+    position: absolute;
+    top: -12px; 
+    left: 10px; 
+}
+
+.ingresos{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1%;
+    border: 1px solid #494949d8;
+    border-radius: 5px;
+    margin: 8px 0; /* Más espacio entre el input y otros elementos */
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.boton {
+    padding: 1%;
+    width: 60%;
+    margin: auto;
+    margin-top: 1%;
+    border: none;
+    background-color: #ff8a42;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #f7833cc0;
+}
+
+.boton-google{
+    padding: 1%;
+    width: 30%;
+    margin: auto;
+    margin-top: 1%;
+    border: 3px solid transparent;
+    background-color: transparent;
+    background-image: linear-gradient(#1C1C1C, #1C1C1C), linear-gradient(45deg, #34A853, #4285F4, #FFFFFF, #EA4335, #FBBC05);
+    background-origin: border-box; /* Gradiente aplicado al borde */
+    background-clip: padding-box, border-box;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Propiedades del footer*/
+/*Se centra el contenido del footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #494949d8;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-content p, .footer-content a{
+    margin: 0; /*Se eliminan los margenes para acercar los elemntos*/
+}
+
+a{
+    color: #FF8C42;
+}
+
+/* TAMAÑO PARA TABLETS Y LAPTOPS */
+@media (max-width: 1024px) {
+    .contenedor-titulo {
+        width: 50%;
+        margin: auto;
+    }
+
+    .titulo-pagina {
+        font-size: 24px; /* Ajustamos el tamaño del título */
+        text-align: center;
+    }
+
+    fieldset {
+        width: 95%;
+        margin: 2%;
+        padding: 2% 3%;
+    }
+
+    .titulo-input {
+        font-size: 0.9rem; /* Ajustamos el tamaño de los legend */
+        background-color: transparent;
+    }
+
+    .boton-google {
+        font-size: 14px; /* Ajustamos el tamaño del texto en el botón de Google */
+    }
+}
+
+/* TAMAÑO PARA TABLETS MÁS PEQUEÑAS */
+@media (max-width: 768px) {
+    .contenedor-titulo {
+        width: 70%;
+        margin: auto;
+    }
+
+    .titulo-pagina {
+        font-size: 20px; /* Ajustamos el tamaño del título */
+        text-align: center;
+    }
+
+    .titulo-input {
+        font-size: 0.85rem; /* Ajustamos el tamaño de los legend */
+    }
+
+    .boton-google {
+        font-size: 13px; /* Ajustamos el tamaño del texto en el botón de Google */
+    }
+}
+
+/* TAMAÑO PARA MÓVILES */
+@media (max-width: 480px) {
+    .contenedor-titulo {
+        width: 90%;
+        margin: auto;
+    }
+
+    .titulo-pagina {
+        font-size: 16px; /* Ajustamos el tamaño del título */
+        text-align: center;
+    }
+
+    .titulo-input {
+        font-size: 0.7rem; /* Ajustamos aún más el tamaño de los legend para móviles */
+    }
+
+    .boton-google {
+        font-size: 12px; /* Ajustamos el tamaño del texto en el botón de Google */
+    }
+}
